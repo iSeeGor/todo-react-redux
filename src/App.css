@@ -37,6 +37,51 @@
   padding: 2em;
 }
 
+input[type='text'] {
+  border: 1px solid #CCC;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 .read-the-docs {
   color: #888;
+}
+
+.formAddTodo {
+  display: flex;
+  gap: 8px;
+}
+
+.todoList {
+  list-style-type: none;
+  padding: 0;
+  font-size: 16px;
+}
+
+.todoList__item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 20px 1fr 20px;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px dashed #888888;
+}
+
+.todoList__item-text {
+  text-align: start;
+  font-weight: 500;
+}
+
+.todoList__item-del {
+  cursor: pointer;
+  font-size: 20px;
+  color: red;
+  padding: 4px;
+}
+
+.todoList__item input[type="checkbox"]:checked + .todoList__item-text {
+  text-decoration: line-through;
+
 }
